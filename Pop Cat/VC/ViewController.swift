@@ -56,19 +56,34 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, AVAudioPlay
     }
     
     func popString() {
-        let springLabel = SpringLabel().then {
+        weak var springLabel: SpringLabel? = SpringLabel().then {
             $0.text = str
             $0.textColor = (self.traitCollection.userInterfaceStyle == .dark) ? .white : .black
-            $0.font = UIFont(name: "BMJUA_otf", size: CGFloat.random(in: 10...30))
-            $0.animation = "zoomOut"
+            $0.font = UIFont(name: "BMJUA_otf", size: 0)
+            $0.font = $0.font.withSize(CGFloat.random(in: 10...30))
+            $0.animation = "fadeInUp"
             $0.curve = "easeIn"
-            $0.duration = 1
+            $0.duration = 1.0
+            $0.damping = 0.2
+            $0.velocity = 0.3
+            $0.rotate = CGFloat.random(in: 0...5 )
             $0.frame = CGRect(x: view.frame.width/2, y: 40, width: 100, height: 100)
             view.addSubview($0)
         }
-        springLabel.animateNext {
-            springLabel.removeFromSuperview()
+        
+//        springLabel?.animateNext {
+//            springLabel?.animation = "slideUp"
+//            springLabel?.curve = "spring"
+//        }
+        
+        springLabel?.animateNext {
+            
+            springLabel?.removeFromSuperview()
+            
+            springLabel = nil
+            print(self.view.subviews)
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
