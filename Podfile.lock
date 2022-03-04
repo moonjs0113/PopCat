@@ -1,0 +1,28 @@
+PODS:
+  - Spring (1.0.6)
+  - Then (2.7.0)
+
+DEPENDENCIES:
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - Then
+
+SPEC REPOS:
+  trunk:
+    - Then
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 50d92a5b9e08848387ae95bf44c6ad20834f7083
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+
+PODFILE CHECKSUM: 96a77d870ebb3e62a4749f062d24163d23cebcbf
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pop_Cat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pop_on" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-eV-fxo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VRd-sc-dte">
+                                <rect key="frame" x="345" y="59" width="54" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAf-qM-iGD">
+                                        <rect key="frame" x="0.0" y="0.0" width="23" height="22"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="person.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="showBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zRE-Np-JQG"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w52-A0-aoS">
+                                        <rect key="frame" x="28" y="0.0" width="0.0" height="22"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="pencil.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="changeLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="roR-XK-v8P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Is-YR-rbI">
+                                        <rect key="frame" x="33" y="0.0" width="21" height="22"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" image="slider.horizontal.3" catalog="system"/>
+                                        <connections>
+                                            <action selector="goToSettingView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9r-Ly-fQc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VRd-sc-dte" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="7FM-q0-ag2"/>
+                            <constraint firstItem="Z6f-eV-fxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BSl-lJ-mfH"/>
+                            <constraint firstItem="Z6f-eV-fxo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lny-Ut-xL1"/>
+                            <constraint firstItem="Z6f-eV-fxo" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="VPd-Nw-snG"/>
+                            <constraint firstItem="Z6f-eV-fxo" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="cDU-gK-3bc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VRd-sc-dte" secondAttribute="trailing" constant="15" id="eZv-0q-Jh5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z6f-eV-fxo" secondAttribute="trailing" id="i7Y-zh-lFE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z6f-eV-fxo" secondAttribute="bottom" id="uwq-Fl-QIM"/>
+                            <constraint firstItem="VRd-sc-dte" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.130435" id="wWA-L5-Ug7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroudButton" destination="gAf-qM-iGD" id="fIm-9R-tHZ"/>
+                        <outlet property="changeStringButton" destination="w52-A0-aoS" id="gBA-zX-tRf"/>
+                        <outlet property="imageView" destination="Z6f-eV-fxo" id="h4H-ud-h0y"/>
+                        <outlet property="settingButton" destination="2Is-YR-rbI" id="yzZ-g2-1Ok"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="pop_on" width="800" height="900"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
