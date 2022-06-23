@@ -8,11 +8,13 @@
 [Platform-image]: https://img.shields.io/badge/Platform-ios-lightgray.svg?style=flat
 [Version-image]: https://img.shields.io/badge/Version-1.0-blue.svg?style=flat
 
+## App View
+|<img src="./gitFile/open.PNG">|<img src="./gitFile/close.PNG">|
+|:-:|:-:|
+
 ## Feature
 귀엽습니다.   
 터치하면 Pop 소리를 냅니다.
 
-## App View
-|<img src="./gitFile/open.PNG">|<img src="./gitFile/close.PNG">|
-|:-:|:-:|
+
 
