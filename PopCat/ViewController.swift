@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 //import Spring
-import Then
+//import Then
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate, AVAudioPlayerDelegate {
     
@@ -23,7 +23,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, AVAudioPlay
     @IBOutlet var backgroudButton: UIButton!
     @IBOutlet var changeStringButton: UIButton!
     @IBOutlet var settingButton: UIButton!
-    
     @IBOutlet var imageView: UIImageView!
     
     // MARK: - Methods
